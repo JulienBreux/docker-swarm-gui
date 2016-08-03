@@ -17,8 +17,9 @@
       .node-wrapper h2 { margin: 10px 0; text-align: center; color: #8295A4; font-weight: normal; font-family: sans-serif; font-size: 18px; }
 
       .services-wrapper { display: flex; flex-direction: column; justify-content: flex-end; padding-top: 8px; min-height: 300px; border: 2px solid #496379; background-color: #254358; }
-      .service-wrapper { margin: 0 8px 8px; height: 70px; overflow: auto; border: 2px solid #496379; background-color: #3F586A; }
-      .service-wrapper p { margin: 0; padding: 5px; font-size: 12px; font-family: sans-serif; color: #8295A4; }
+      .service-wrapper { margin: 0 8px 8px; height: 70px; position: relative; overflow: auto; border: 2px solid #496379; background-color: #3F586A; }
+      .service-wrapper .circle { position: absolute; top: 5px; right: 5px; cursor: help; }
+      .service-wrapper h3 { margin: 0; padding: 5px; font-size: 12px; font-weight: normal; font-family: sans-serif; color: #8295A4; }
 
       .circle { display: inline-block; width: 12px; height: 12px; border-radius: 50%; }
       .circle-green { background-color: #06FA0A; }
@@ -39,29 +40,6 @@
     </header>
     <section class="nodes-wrapper" id="viewport">
       <p class="notice">No node.</p>
-<!--
-      <section class="node-wrapper">
-        <h2><i class="circle circle-green"></i> node1</h2>
-        <section class="services-wrapper">
-          <article class="service-wrapper"><p>First</p></article>
-          <article class="service-wrapper"><p>Second</p></article>
-        </section>
-      </section>
-      <section class="node-wrapper">
-        <h2><i class="circle circle-green"></i> node2</h2>
-        <section class="services-wrapper">
-          <article class="service-wrapper"><p>Third</p></article>
-          <article class="service-wrapper"><p>Fourth</p></article>
-        </section>
-      </section>
-      <section class="node-wrapper">
-        <h2><i class="circle circle-green"></i> node3</h2>
-        <section class="services-wrapper">
-          <article class="service-wrapper"><p>Fifth</p></article>
-          <article class="service-wrapper"><p>Sixth</p></article>
-        </section>
-      </section>
--->
     </section>
     <footer class="main-footer">
       <p>
@@ -71,7 +49,10 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script>
       function buildService(data, viewport) {
-        var $html = $('<article class="service-wrapper"><p>' + data.name + '</p></article>');
+        var $html = $('<article class="service-wrapper">' +
+                   '<span class="circle" title="Service: ' + data.serviceId + '" style="background-color: ' + data.color + ';"></span>' +
+                   '<h3>' + data.name + '</h3>' +
+                   '</article>');
         $(viewport).append($html);
 
         return $html;

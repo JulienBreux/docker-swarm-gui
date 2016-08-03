@@ -1,3 +1,4 @@
+require 'digest/md5'
 require 'faye/websocket'
 require 'rack'
 require 'docker'
@@ -14,11 +15,14 @@ App = lambda do |env|
         all_services = Docker.connection.get('/tasks')
         all_services = JSON.parse(all_services)
         all_services = all_services.map do |service|
+          color = '#' + Digest::MD5.hexdigest(service['ServiceID'])[0..5]
           {
-            'id'     => service['ID'][0..25],
-            'nodeId' => service['NodeID'],
-            'name'   => service['ID'],
-            'status' => service['Status']['State']
+            'id'        => service['ID'],
+            'nodeId'    => service['NodeID'],
+            'serviceId' => service['ServiceID'],
+            'name'      => service['ID'][0..12],
+            'status'    => service['Status']['State'],
+            'color'     => color
           }
         end
         all_services = all_services.select do |service|
@@ -35,7 +39,7 @@ App = lambda do |env|
         all_nodes = all_nodes.map do |node|
           services = all_services.select { |hash| hash['nodeId'] == node['ID'] }
           {
-            'id'       => node['ID'][0..25],
+            'id'       => node['ID'],
             'hostname' => node['Description']['Hostname'],
             'services' => services
           }
