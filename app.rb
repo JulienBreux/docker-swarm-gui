@@ -32,7 +32,7 @@ App = lambda do |env|
           }
         end
         all_services = all_services.select do |service|
-          service['status'] == 'running'
+          !['shutdown'].include? service['status']
         end
       rescue
         all_services = []
