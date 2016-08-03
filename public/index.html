@@ -24,9 +24,9 @@
       .node-wrapper h2 { margin: 10px 0; text-align: center; color: #8295A4; font-weight: normal; font-family: sans-serif; font-size: 18px; }
 
       .services-wrapper { display: flex; flex-direction: column; justify-content: flex-end; padding-top: 8px; min-height: 300px; border: 2px solid #496379; background-color: #254358; }
-      .service-wrapper { margin: 0 8px 8px; height: 70px; position: relative; overflow: auto; border: 2px solid #496379; background-color: #3F586A; }
+      .service-wrapper { margin: 0 8px 8px; height: 70px; position: relative; overflow: hidden; border: 2px solid #496379; background-color: #3F586A; }
       .service-wrapper .circle { position: absolute; top: 5px; right: 5px; cursor: help; }
-      .service-wrapper h3 { margin: 0; padding: 5px; font-size: 12px; font-weight: normal; font-family: sans-serif; color: #8295A4; }
+      .service-wrapper h3, .service-wrapper p { margin: 0; padding: 5px; font-size: 12px; font-family: sans-serif; color: #8295A4; }
 
       .circle { display: inline-block; width: 12px; height: 12px; border-radius: 50%; }
       .circle-green { background-color: #06FA0A; }
@@ -58,6 +58,7 @@
         var $html = $('<article class="service-wrapper">' +
                    '<span class="circle" title="Service: ' + data.serviceId + '" style="background-color: ' + data.color + ';"></span>' +
                    '<h3>' + data.name + '</h3>' +
+                   '<p>' + data.id + '</p>' +
                    '</article>');
         $(viewport).append($html);
 

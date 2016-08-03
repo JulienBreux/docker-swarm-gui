@@ -12,15 +12,21 @@ App = lambda do |env|
     ws.on :message do |_|
       # Services
       begin
+        all_services_details = Docker.connection.get('/services')
+        all_services_details = JSON.parse(all_services_details)
+
         all_services = Docker.connection.get('/tasks')
         all_services = JSON.parse(all_services)
         all_services = all_services.map do |service|
+          details = all_services_details.select do |service_detail|
+            service_detail['ID'] == service['ServiceID']
+          end
           color = '#' + Digest::MD5.hexdigest(service['ServiceID'])[0..5]
           {
             'id'        => service['ID'],
             'nodeId'    => service['NodeID'],
             'serviceId' => service['ServiceID'],
-            'name'      => service['ID'][0..12],
+            'name'      => details[0]['Spec']['Name'],
             'status'    => service['Status']['State'],
             'color'     => color
           }
@@ -29,7 +35,7 @@ App = lambda do |env|
           service['status'] == 'running'
         end
       rescue
-        all_services = {}
+        all_services = []
       end
 
       # Nodes
