@@ -28,3 +28,8 @@ See [LICENSE](https://github.com/JulienBreux/docker-swarm-gui/blob/master/LICENS
 You can download Julien Breux's public key to verify the signature.
 
     gpg --keyserver hkp://pgp.mit.edu --recv-keys 0998EBAA
+
+
+## Alternative
+
+- [Docker Swarm Visualizer](https://github.com/ManoMarks/docker-swarm-visualizer)
