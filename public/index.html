@@ -10,9 +10,13 @@
     <link rel="icon" href="https://hub.docker.com/favicon.ico" type="image/x-icon">
 
     <style media="screen">
+      @keyframes swim { 0% { transform: rotate(0deg); } 25% { transform: rotate(25deg); } 50% { transform: rotate(-10deg); } 75% { transform: rotate(0deg); } 100% { transform: rotate(0deg); } }
+      @keyframes beat { to { transform: scale(1.5); } }
+
       body { margin: 0; padding: 0; background-color: #254358; }
+
       .main-header { margin: 30px 0 40px 0; padding-bottom: 10px; text-align:center; border-bottom: 1px solid #496379; }
-      .main-header img { width: 100px; }
+      .main-header img { width: 100px; animation: 3s swim infinite; }
 
       .nodes-wrapper { display: flex; align-items: center; justify-content: center; margin: 0 50px; border: 2px solid #496379; background-color: #455C6F; }
       .nodes-wrapper .notice { text-align: center; color: #fff; font-size: 16px; font-family: sans-serif; }
@@ -31,7 +35,6 @@
       .main-footer p, .main-footer a { text-align: center; font-size: 13px; font-family: sans-serif; color: #8295A4; }
       .main-footer a { text-decoration: none; }
       .main-footer a:hover { text-decoration: underline; }
-      @keyframes beat { to { transform: scale(1.3); } }
       .main-footer p .love { display: inline-block; color: #FF0C5E; font-weight: bold; animation: beat .25s infinite alternate; alternate; transform-origin: center; }
     </style>
   </head>
