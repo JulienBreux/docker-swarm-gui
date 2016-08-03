@@ -1,6 +1,6 @@
 # Docker Swarm GUI
 
-[![Docker pull](https://img.shields.io/docker/pulls/JulienBreux/docker-swarm-gui.svg)](https://hub.docker.com/r/JulienBreux/docker-swarm-gui/) [![Docker pull](https://img.shields.io/docker/stars/JulienBreux/docker-swarm-gui.svg)](https://hub.docker.com/r/JulienBreux/docker-swarm-gui/) [![Github issues](https://img.shields.io/github/issues/JulienBreux/docker-swarm-gui.svg)](https://github.com/JulienBreux/docker-swarm-gui/issues) [![License](https://img.shields.io/github/license/JulienBreux/docker-swarm-gui.svg)](https://github.com/JulienBreux/docker-swarm-gui/blob/master/LICENSE)
+[![Docker pull](https://img.shields.io/docker/pulls/julienbreux/docker-swarm-gui.svg)](https://hub.docker.com/r/julienbreux/docker-swarm-gui/) [![Docker pull](https://img.shields.io/docker/stars/julienbreux/docker-swarm-gui.svg)](https://hub.docker.com/r/julienbreux/docker-swarm-gui/) [![Github issues](https://img.shields.io/github/issues/JulienBreux/docker-swarm-gui.svg)](https://github.com/JulienBreux/docker-swarm-gui/issues) [![License](https://img.shields.io/github/license/JulienBreux/docker-swarm-gui.svg)](https://github.com/JulienBreux/docker-swarm-gui/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/follow/JulienBreux.svg)](https://twitter.com/JulienBreux)
 
 :package: [Docker](https://www.docker.com) Swarm GUI is a tiny tool to help you to visualize the state of your [Docker](https://www.docker.com) swarm.
