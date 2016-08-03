@@ -47,8 +47,12 @@ App = lambda do |env|
           {
             'id'       => node['ID'],
             'hostname' => node['Description']['Hostname'],
+            'status'   => node['Status']['State'].downcase,
             'services' => services
           }
+        end
+        all_nodes = all_nodes.select do |node|
+          ['ready'].include? node['status']
         end
       rescue
         all_nodes = {}
