@@ -13,7 +13,7 @@ docker run -it --rm -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock  j
 
 ### Preview
 
-<img src="https://raw.githubusercontent.com/JulienBreux/docker-swarm-gui/master/resources/screenshots/interface.png" alt="Docker Swarm GUI screenshot" />
+![Docker Swarm GUI preview](https://raw.githubusercontent.com/JulienBreux/docker-swarm-gui/master/resources/screenshots/interface.gif)
 
 ## Donate
 
