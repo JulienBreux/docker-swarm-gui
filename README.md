@@ -1,6 +1,7 @@
 # Docker Swarm GUI
 
 [![Docker pull](https://img.shields.io/docker/pulls/julienbreux/docker-swarm-gui.svg)](https://hub.docker.com/r/julienbreux/docker-swarm-gui/) [![Docker pull](https://img.shields.io/docker/stars/julienbreux/docker-swarm-gui.svg)](https://hub.docker.com/r/julienbreux/docker-swarm-gui/) [![Github issues](https://img.shields.io/github/issues/JulienBreux/docker-swarm-gui.svg)](https://github.com/JulienBreux/docker-swarm-gui/issues) [![License](https://img.shields.io/github/license/JulienBreux/docker-swarm-gui.svg)](https://github.com/JulienBreux/docker-swarm-gui/blob/master/LICENSE)
+[![Dependency Status](https://dependencyci.com/github/JulienBreux/docker-swarm-gui/badge)](https://dependencyci.com/github/JulienBreux/docker-swarm-gui)
 [![Twitter](https://img.shields.io/twitter/follow/JulienBreux.svg)](https://twitter.com/JulienBreux)
 
 :package: [Docker](https://www.docker.com) Swarm GUI is a tiny tool to help you to visualize the state of your [Docker](https://www.docker.com) swarm.
