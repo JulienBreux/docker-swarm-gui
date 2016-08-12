@@ -3,7 +3,7 @@ require 'faye/websocket'
 require 'rack'
 require 'docker'
 
-Rack::File.new(File.dirname(__FILE__))
+static = Rack::File.new(File.dirname(__FILE__) + '/public')
 
 App = lambda do |env|
   if Faye::WebSocket.websocket?(env)
@@ -68,6 +68,8 @@ App = lambda do |env|
 
     ws.rack_response
   else
-    [200, { 'Content-Type' => 'text/html' }, [File.read('public/index.html')]]
+    req = Rack::Request.new(env)
+    req.path_info += 'index.html' if req.path_info == '/'
+    static.call(env)
   end
 end

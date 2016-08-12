@@ -6,8 +6,8 @@
 
     <title>Docker Swarm GUI - By Julien Breux</title>
 
-    <link rel="shortcut icon" href="https://hub.docker.com/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://hub.docker.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/icon/favicon.ico" type="image/x-icon">
 
     <style media="screen">
       @keyframes swim { 0% { transform: rotate(0deg); } 25% { transform: rotate(25deg); } 50% { transform: rotate(-10deg); } 75% { transform: rotate(0deg); } 100% { transform: rotate(0deg); } }
@@ -42,7 +42,7 @@
   <body>
     <header class="main-header">
       <h1>
-        <img src="https://hub.docker.com/public/images/logos/mini-logo.svg" alt="Docker">
+        <img src="assets/img/docker-logo.svg" alt="Docker">
       </h1>
     </header>
     <section class="nodes-wrapper" id="viewport">
@@ -53,7 +53,7 @@
         With <span class="love">❤</span> by <a href="https://github.com/JulienBreux" class="avatar">Julien Breux</a>
       </p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="assets/js/lib/jquery/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script>
       function buildService(data, viewport) {
         var $html = $('<article class="service-wrapper service-' + data.status + '">' +
